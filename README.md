@@ -22,6 +22,28 @@ git push -uf origin main
 
 ## Integrate with your tools
 
+                         OFFICIAL INTERVENTIONS
+    
+    NOTE: Comment/uncomment the code section for the scenario to test
+          
+    1. Flexible Partitions (FP) 
+    (in the code, the intervention can be found as "curtains")
+    2. Attention Area Separation (AS).
+    3. Holding Area Separation (HS).
+    (in the code, the intervention can be found as "waiting area separation")
+    4. ED Base Separation (EBS).
+    (in the code, ED Base can be found as "Nurse base")
+    5. ED Base Extension (EBE).
+    6. Ventilation (Vent).
+    7. HS + AS
+    8. FP + Vent
+    9. AS + Vent
+    10. EBE + Vent
+    11. AS + EBE +Vent
+    
+    Gustavo Hernandez Mejia
+
+
 - [ ] [Set up project integrations](https://zivgitlab.uni-muenster.de/mejia/architectural_interventions_emergency_dep/-/settings/integrations)
 
 ## Collaborate with your team
