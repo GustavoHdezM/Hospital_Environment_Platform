@@ -1,8 +1,8 @@
-# Architectural interventions Emergency Departent
+# Architectural interventions to mitigate the spread of SARS-CoV-2 in emergency departments
 
 
 
-## Getting started
+## Description
 
 To make it easy for you to get started with GitLab, here's a list of recommended next steps.
 
