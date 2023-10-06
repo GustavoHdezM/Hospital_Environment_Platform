@@ -63,7 +63,7 @@ For running the Attention Area Separation (AS), comment the base case section an
 We calculate the incidence rate ratio (IRR) and the incidence rate difference (IRD) per 1,000 person-months for various infection-related endpoints for each intervention scenario and compare them to the base case.
 - **Endpoints**: Infections | Hospitalizations | ICU admissions | Deaths
 
-Ensure that the file "```main_Epidem_Endpoints.R```" accesses the results of the simulation platform. In the example case, these are under the subfolder "```1_Simulation_Results```".
+Contained in the ```13_Epidemiology_Endpoints``` folder, ensure that the file "```main_Epidem_Endpoints.R```" accesses the results of the simulation platform. In the example case, these are under the subfolder "```1_Simulation_Results```".
 The outcome saves Excel files for the IRR and IRD for each intervention and endpoint.
 
 ## Folders
