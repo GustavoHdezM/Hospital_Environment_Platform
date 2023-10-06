@@ -5,6 +5,8 @@
 
 In this project, we explore how architectural interventions could mitigate the spread of emerging respiratory pathogens using the example of SARS-CoV-2 during the first pandemic wave in 2020 in a prototypical emergency department (ED) setting. For more information, please refer to the paper draft.
 
+Should you have a question on the repository, send a line to mejia@uni-muenster.de
+
 ## Dependencies
 
 - The ED modeling platform was developed in Python 3.11
