@@ -11,7 +11,6 @@ In this project, we explore how architectural interventions could mitigate the s
 - Tool for launching parallel tasks (scenarios) - [concurrent.futures](https://docs.python.org/3/library/concurrent.futures.html#)
 - Epidemiology Endpoints tests run in R
 
-
 - For managing using the [command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command (default):
 
 ```
@@ -35,9 +34,7 @@ git push -uf origin main
 
     ```
                        SCENARIOS
-    
-    NOTE: Comment/uncomment the code section for the scenario to test
-          
+             
     1. Flexible Partitions (FP) 
     (in the code, the intervention can be found as "curtains")
     2. Attention Area Separation (AS).
@@ -66,3 +63,12 @@ We calculate the incidence rate ratio (IRR) and the incidence rate difference (I
 
 Ensure that the file "```main_Epidem_Endpoints.R```" accesses the results of the simulation platform. In the example case, these are under the subfolder "```1_Simulation_Results```".
 The outcome saves Excel files for the IRR and IRD for each intervention and endpoint.
+
+## Folders
+- The 12 folders for each tested scenario contain results for the number of newly infected individuals, patients and HCWs.
+Each folder contains three files for these cathegories (```Base_Total.xlsx```, ```Base_Total_Pat.xlsx```, ```Base_Total_HCW.xlsx```).
+
+- The folder ```data_arriv``` contains files reporting the transmission probability (TP) values (time-based) for the each of the ED areas for the far-field transmission. The folder also contains the file for TP dynamics for the near-field interactions.
+
+- The file ```Arriving_data.xlsx```	contains the distribution of the daily arrival of patients to the ED.
+
