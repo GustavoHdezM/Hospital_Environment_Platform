@@ -8,13 +8,12 @@ In this project, we explore how architectural interventions could mitigate the s
 
 ## Dependencies
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
 - The ED modeling platform was developed in Python 3.11
 - Tool for launching parallel tasks (scenarios) - [concurrent.futures](https://docs.python.org/3/library/concurrent.futures.html#)
 - Epidemiology Endpoints tests run in R
 
 
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+- For managing using the [command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command (default):
 
 ```
 cd existing_repo
@@ -33,10 +32,10 @@ git push -uf origin main
 
 ```figs_architect_interv_ED```. Produce boxplots for each scenario and ED area plotting the number of new infections (patients and healthcare workers) per scenario.
 
-## In code section for testing scenarios 
+### In code section for testing scenarios 
 
     ```
-                         OFFICIAL INTERVENTIONS
+                       SCENARIOS
     
     NOTE: Comment/uncomment the code section for the scenario to test
           
@@ -54,15 +53,25 @@ git push -uf origin main
     9. AS + Vent
     10. EBE + Vent
     11. AS + EBE +Vent
-
-
     ```
+### Notes
+Ensure the "```data_arriv```" folder path content is reachable in the main platform file "```main_architect_interv_ED```".
+Ensure to **Comment/uncomment** the code section for the scenario you want to test, the case example runs the Base case (no interventions applied). 
+For running the Attention Area Separation (AS), comment the base case section and uncomment the corresponding one.
+
+
+## Epidemiology endpoints
+
+We calculate the incidence rate ratio (IRR) and the incidence rate difference (IRD) per 1,000 person-months for various infection-related endpoints for each intervention scenario and compare them to the base case.
+- Endpoints: Infections | Hospitalizations | ICU admissions | Deaths
+
+Ensure that the file "```main_Epidem_Endpoints.R```" accesses the results of the simulation platform. In the example case, these are under the subfolder "```1_Simulation_Results```".
+The outcome saves Excel files for the IRR and IRD for each intervention and endpoint.
 
 
 
-- [ ] [Set up project integrations](https://zivgitlab.uni-muenster.de/mejia/architectural_interventions_emergency_dep/-/settings/integrations)
 
-## Collaborate with your team
+[//]: # ## Collaborate with your team
 
 - [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
 - [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
