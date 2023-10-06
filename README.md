@@ -4,13 +4,16 @@
 
 ## Description
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+In this project, we explore how architectural interventions could mitigate the spread of emerging respiratory pathogens using the example of SARS-CoV-2 during the first pandemic wave in 2020 in a prototypical emergency department (ED) setting. For more information, please refer to the paper draft.
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
-
-## Add your files
+## Dependencies
 
 - [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
+- The ED modeling platform was developed in Python 3.11
+- Tool for launching parallel tasks (scenarios) - [concurrent.futures](https://docs.python.org/3/library/concurrent.futures.html#)
+- Epidemiology Endpoints tests run in R
+
+
 - [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
 
 ```
@@ -20,8 +23,19 @@ git branch -M main
 git push -uf origin main
 ```
 
-## Integrate with your tools
+## Running Scenarios
+### Platform files (.py)
+```main_architect_interv_ED```. This file contains the complete modeling platform for running each scenario, base case, and each architectural intervention. Comment/uncomment the code section for the scenario to be tested.
 
+```funct_architect_interv_ED```. Contains complementary functions, callable from the main file.
+
+```parall_architect_interv_ED```. File for launching parallel scenarios, runs X number of parallel simulations, case example with 1000 simulations. Ensure changing the saving path for each new testing scenario.
+
+```figs_architect_interv_ED```. Produce boxplots for each scenario and ED area plotting the number of new infections (patients and healthcare workers) per scenario.
+
+## In code section for testing scenarios 
+
+    ```
                          OFFICIAL INTERVENTIONS
     
     NOTE: Comment/uncomment the code section for the scenario to test
@@ -40,8 +54,10 @@ git push -uf origin main
     9. AS + Vent
     10. EBE + Vent
     11. AS + EBE +Vent
-    
-    Gustavo Hernandez Mejia
+
+
+    ```
+
 
 
 - [ ] [Set up project integrations](https://zivgitlab.uni-muenster.de/mejia/architectural_interventions_emergency_dep/-/settings/integrations)
